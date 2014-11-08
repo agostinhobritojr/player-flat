@@ -7,8 +7,9 @@
 #include <QDebug>
 #include <QResizeEvent>
 #include <QTimerEvent>
-#include <QPainterPath>
-#include <QEasingCurve>
+#include <QMessageBox>
+#include <QAction>
+#include <QMenu>
 
 Spectrograph::Spectrograph(QWidget *parent) :
   AbstractSpectrograph(parent){
@@ -34,6 +35,8 @@ Spectrograph::Spectrograph(QWidget *parent) :
   decayBrush.setStyle(Qt::SolidPattern);
   barWidth = MIN_BARWIDTH;
   barSpacing = 1;
+  acao = new QAction("Acao",this);
+  connect(acao,SIGNAL(triggered()),this,SLOT(doAction()));
 }
 
 void Spectrograph::resizeEvent(QResizeEvent *e){
@@ -58,11 +61,25 @@ void Spectrograph::resizeEvent(QResizeEvent *e){
   repaint();
 }
 
+void Spectrograph::contextMenuEvent(QContextMenuEvent *e)
+{
+  QMenu menu;
+  menu.addAction(acao);
+  menu.exec(e->globalPos());
+}
+
 void Spectrograph::loadLevels(double left, double right){
   if(leftLevel < 5*width()/2*left)
     leftLevel = 5*width()/2*left;
   if(rightLevel < 5*width()/2*right)
     rightLevel = 5*width()/2*right;
+}
+
+void Spectrograph::doAction()
+{
+  QMessageBox box;
+  box.setText(QString("Aha!"));
+  box.exec();
 }
 
 void Spectrograph::paintEvent(QPaintEvent *e){
@@ -81,9 +98,11 @@ void Spectrograph::paintEvent(QPaintEvent *e){
   for(int i=0; i<NUM_BANDS;i++){
     p1x = i*barWidth;
     p2x = p1x+barWidth;
-    p1y = widgetHeight-spectrum[i];
+    p1y = widgetHeight/2-spectrum[i]/2;
     p.setBrush(gradientBrush);
-    p.drawRect(QRectF(QPointF(p1x,p1y),QPointF(p2x,widgetHeight)));
+    p.drawRect(QRectF(QPointF(p1x,p1y),QPointF(p2x,widgetHeight/2)));
+    p1y = widgetHeight/2+spectrum[i]/2;
+    p.drawRect(QRectF(QPointF(p1x,p1y),QPointF(p2x,widgetHeight/2)));
     }
   p.setBrush(Qt::black);
   p.drawRect(0,height()-7,width(),7);

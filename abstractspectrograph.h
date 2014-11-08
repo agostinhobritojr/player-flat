@@ -8,7 +8,7 @@
 class AbstractSpectrograph : public QWidget{
   Q_OBJECT
 public:
-  explicit AbstractSpectrograph(QWidget *){}
+  explicit AbstractSpectrograph(QWidget *parent):QWidget(parent){}
 
 signals:
 

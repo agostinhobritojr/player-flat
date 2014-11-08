@@ -138,6 +138,8 @@ MainWindow::MainWindow(QWidget *parent) :
   // tells the probe what to probe
   probe->setSource(player);
 
+  playlist->addMedia(QUrl:: (":/audiosample.mp3"));
+
 }
 
 // what to do when user select a new song to play

@@ -9,7 +9,7 @@ private:
   Q_OBJECT
 public:
   // constructor does nothing
-  explicit AbstractControl(QWidget *parent = 0):QWidget(parent){}
+  explicit AbstractControl(QWidget *parent = 0){Q_UNUSED(parent)}
 
 public slots:
   // listen when mainwindow tells user pressed play/pause button
