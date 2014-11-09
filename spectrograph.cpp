@@ -49,22 +49,42 @@ void Spectrograph::contextMenuEvent(QContextMenuEvent *e)
   menu.exec(e->globalPos());
 }
 
+/**
+ * @brief Spectrograph::loadLevels
+ * @param left
+ * @param right
+ *
+ * loads left and right mean audio levels
+ * do some scaling for better display purposes
+ */
+
 void Spectrograph::loadLevels(double left, double right){
   if(leftLevel < 5*width()/2*left)
     leftLevel = 5*width()/2*left;
   if(rightLevel < 5*width()/2*right)
     rightLevel = 5*width()/2*right;
 }
+/**
+ * @brief Spectrograph::doAction
+ *
+ * this function is called when "acao" action is called
+ * on the popup context menu
+ */
+void Spectrograph::doAction(){
 
-void Spectrograph::doAction()
-{
-  QMessageBox box;
-  box.setText(QString("Aha!"));
-  box.exec();
+  QMessageBox box; //! Creates the message box
+  box.setText(QString("Aha!")); //! defines a text for the box
+  box.exec(); //! display the message box
 }
-
+/**
+ * @brief Spectrograph::paintEvent
+ * @param e
+ *
+ * This is the function that draws the widget
+ */
 void Spectrograph::paintEvent(QPaintEvent *e){
-  Q_UNUSED(e);
+  Q_UNUSED(e); //! some events are not necessary.
+  //!we marked the as UNUSED to avoid compiler warnings
   QPainter p(this);
   QPen pen;
   float p1x, p1y, p2x;
@@ -84,7 +104,7 @@ void Spectrograph::paintEvent(QPaintEvent *e){
     p.drawRect(QRectF(QPointF(p1x,p1y),QPointF(p2x,widgetHeight/2)));
     p1y = widgetHeight/2+spectrum[i]/2;
     p.drawRect(QRectF(QPointF(p1x,p1y),QPointF(p2x,widgetHeight/2)));
-    }
+  }
   p.setBrush(Qt::black);
   p.drawRect(0,height()-7,width(),7);
   p.setBrush(Qt::red);

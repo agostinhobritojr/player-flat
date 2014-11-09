@@ -1,55 +1,139 @@
-\hypertarget{class_playlist_model}{\section{Referência à classe Playlist\-Model}
+\hypertarget{class_playlist_model}{\section{Playlist\-Model Class Reference}
 \label{class_playlist_model}\index{Playlist\-Model@{Playlist\-Model}}
 }
-Diagrama de heranças da classe Playlist\-Model\begin{figure}[H]
+
+
+{\ttfamily \#include $<$playlistmodel.\-h$>$}
+
+Inheritance diagram for Playlist\-Model\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_playlist_model}
 \end{center}
 \end{figure}
-\subsection*{Tipos Públicos}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries Column} \{ {\bfseries Title} = 0, 
-{\bfseries Column\-Count}
+enum \hyperlink{class_playlist_model_a85df23455e37bba0806ef488fb96f435}{Column} \{ \hyperlink{class_playlist_model_a85df23455e37bba0806ef488fb96f435ad177ef9079b494b37664af91083db9f2}{Title} = 0, 
+\hyperlink{class_playlist_model_a85df23455e37bba0806ef488fb96f435a5e948ab2605fd6c754aff3bef76f0373}{Column\-Count}
  \}
 \end{DoxyCompactItemize}
-\subsection*{Slots públicos}
+\subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_playlist_model_a2deef5b14f8f66431a55fdb0484025b6}{int {\bfseries row\-Count} (const Q\-Model\-Index \&parent=Q\-Model\-Index()) const }\label{class_playlist_model_a2deef5b14f8f66431a55fdb0484025b6}
-
+int \hyperlink{class_playlist_model_a2deef5b14f8f66431a55fdb0484025b6}{row\-Count} (const Q\-Model\-Index \&\hyperlink{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}{parent}=Q\-Model\-Index()) const 
 \item 
-\hypertarget{class_playlist_model_a50cd819e7dec4c4881eebaed8130944d}{int {\bfseries column\-Count} (const Q\-Model\-Index \&parent=Q\-Model\-Index()) const }\label{class_playlist_model_a50cd819e7dec4c4881eebaed8130944d}
-
+int \hyperlink{class_playlist_model_a50cd819e7dec4c4881eebaed8130944d}{column\-Count} (const Q\-Model\-Index \&\hyperlink{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}{parent}=Q\-Model\-Index()) const 
 \item 
-\hypertarget{class_playlist_model_a03d1879138b2a0c6c68d7f6d98cfa92a}{Q\-Model\-Index {\bfseries index} (int row, int column, const Q\-Model\-Index \&parent=Q\-Model\-Index()) const }\label{class_playlist_model_a03d1879138b2a0c6c68d7f6d98cfa92a}
-
+Q\-Model\-Index \hyperlink{class_playlist_model_a03d1879138b2a0c6c68d7f6d98cfa92a}{index} (int row, int column, const Q\-Model\-Index \&\hyperlink{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}{parent}=Q\-Model\-Index()) const 
 \item 
-\hypertarget{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}{Q\-Model\-Index {\bfseries parent} (const Q\-Model\-Index \&child) const }\label{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}
-
+Q\-Model\-Index \hyperlink{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}{parent} (const Q\-Model\-Index \&child) const 
 \item 
-\hypertarget{class_playlist_model_ac3d2bee2441ad8d13662833fd5968aac}{Q\-Variant {\bfseries data} (const Q\-Model\-Index \&index, int role=Qt\-::\-Display\-Role) const }\label{class_playlist_model_ac3d2bee2441ad8d13662833fd5968aac}
-
+Q\-Variant \hyperlink{class_playlist_model_ac3d2bee2441ad8d13662833fd5968aac}{data} (const Q\-Model\-Index \&\hyperlink{class_playlist_model_a03d1879138b2a0c6c68d7f6d98cfa92a}{index}, int role=Qt\-::\-Display\-Role) const 
 \item 
-\hypertarget{class_playlist_model_afe7dce718749f036b23a8cf749dc4388}{Q\-Media\-Playlist $\ast$ {\bfseries playlist} () const }\label{class_playlist_model_afe7dce718749f036b23a8cf749dc4388}
-
+Q\-Media\-Playlist $\ast$ \hyperlink{class_playlist_model_afe7dce718749f036b23a8cf749dc4388}{playlist} () const 
 \item 
-\hypertarget{class_playlist_model_aaf551c97c7a8ded2a3d3333f15f558a5}{void {\bfseries set\-Playlist} (Q\-Media\-Playlist $\ast$playlist)}\label{class_playlist_model_aaf551c97c7a8ded2a3d3333f15f558a5}
-
+void \hyperlink{class_playlist_model_aaf551c97c7a8ded2a3d3333f15f558a5}{set\-Playlist} (Q\-Media\-Playlist $\ast$\hyperlink{class_playlist_model_afe7dce718749f036b23a8cf749dc4388}{playlist})
 \item 
-\hypertarget{class_playlist_model_a61fcc4b9d0eaad86492c283b05c30fbc}{bool {\bfseries set\-Data} (const Q\-Model\-Index \&index, const Q\-Variant \&value, int role=Qt\-::\-Display\-Role)}\label{class_playlist_model_a61fcc4b9d0eaad86492c283b05c30fbc}
-
+bool \hyperlink{class_playlist_model_a61fcc4b9d0eaad86492c283b05c30fbc}{set\-Data} (const Q\-Model\-Index \&\hyperlink{class_playlist_model_a03d1879138b2a0c6c68d7f6d98cfa92a}{index}, const Q\-Variant \&value, int role=Qt\-::\-Display\-Role)
 \end{DoxyCompactItemize}
-\subsection*{Membros públicos}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_playlist_model_a62aaf86821f96310da890e94ff083cb8}{{\bfseries Playlist\-Model} (Q\-Object $\ast$parent=0)}\label{class_playlist_model_a62aaf86821f96310da890e94ff083cb8}
-
+\hyperlink{class_playlist_model_a62aaf86821f96310da890e94ff083cb8}{Playlist\-Model} (Q\-Object $\ast$\hyperlink{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}{parent}=0)
 \end{DoxyCompactItemize}
 
 
-A documentação para esta classe foi gerada a partir dos seguintes ficheiros\-:\begin{DoxyCompactItemize}
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_playlist_model_a85df23455e37bba0806ef488fb96f435}{\index{Playlist\-Model@{Playlist\-Model}!Column@{Column}}
+\index{Column@{Column}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{Column}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Playlist\-Model\-::\-Column}}}\label{class_playlist_model_a85df23455e37bba0806ef488fb96f435}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Title@{Title}!Playlist\-Model@{Playlist\-Model}}\index{Playlist\-Model@{Playlist\-Model}!Title@{Title}}\item[{\em 
+\hypertarget{class_playlist_model_a85df23455e37bba0806ef488fb96f435ad177ef9079b494b37664af91083db9f2}{Title}\label{class_playlist_model_a85df23455e37bba0806ef488fb96f435ad177ef9079b494b37664af91083db9f2}
+}]\index{Column\-Count@{Column\-Count}!Playlist\-Model@{Playlist\-Model}}\index{Playlist\-Model@{Playlist\-Model}!Column\-Count@{Column\-Count}}\item[{\em 
+\hypertarget{class_playlist_model_a85df23455e37bba0806ef488fb96f435a5e948ab2605fd6c754aff3bef76f0373}{Column\-Count}\label{class_playlist_model_a85df23455e37bba0806ef488fb96f435a5e948ab2605fd6c754aff3bef76f0373}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_playlist_model_a62aaf86821f96310da890e94ff083cb8}{\index{Playlist\-Model@{Playlist\-Model}!Playlist\-Model@{Playlist\-Model}}
+\index{Playlist\-Model@{Playlist\-Model}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{Playlist\-Model}]{\setlength{\rightskip}{0pt plus 5cm}Playlist\-Model\-::\-Playlist\-Model (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_playlist_model_a62aaf86821f96310da890e94ff083cb8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_playlist_model_a50cd819e7dec4c4881eebaed8130944d}{\index{Playlist\-Model@{Playlist\-Model}!column\-Count@{column\-Count}}
+\index{column\-Count@{column\-Count}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{column\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Playlist\-Model\-::column\-Count (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{parent = {\ttfamily QModelIndex()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_a50cd819e7dec4c4881eebaed8130944d}
+\hypertarget{class_playlist_model_ac3d2bee2441ad8d13662833fd5968aac}{\index{Playlist\-Model@{Playlist\-Model}!data@{data}}
+\index{data@{data}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Variant Playlist\-Model\-::data (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{index, }
+\item[{int}]{role = {\ttfamily Qt\-:\-:DisplayRole}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_ac3d2bee2441ad8d13662833fd5968aac}
+\hypertarget{class_playlist_model_a03d1879138b2a0c6c68d7f6d98cfa92a}{\index{Playlist\-Model@{Playlist\-Model}!index@{index}}
+\index{index@{index}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Model\-Index Playlist\-Model\-::index (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column, }
+\item[{const Q\-Model\-Index \&}]{parent = {\ttfamily QModelIndex()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_a03d1879138b2a0c6c68d7f6d98cfa92a}
+\hypertarget{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}{\index{Playlist\-Model@{Playlist\-Model}!parent@{parent}}
+\index{parent@{parent}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Model\-Index Playlist\-Model\-::parent (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{child}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_a8ff71ee8d706da034fbe8b9b613a940c}
+\hypertarget{class_playlist_model_afe7dce718749f036b23a8cf749dc4388}{\index{Playlist\-Model@{Playlist\-Model}!playlist@{playlist}}
+\index{playlist@{playlist}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{playlist}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Media\-Playlist $\ast$ Playlist\-Model\-::playlist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_afe7dce718749f036b23a8cf749dc4388}
+\hypertarget{class_playlist_model_a2deef5b14f8f66431a55fdb0484025b6}{\index{Playlist\-Model@{Playlist\-Model}!row\-Count@{row\-Count}}
+\index{row\-Count@{row\-Count}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{row\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Playlist\-Model\-::row\-Count (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{parent = {\ttfamily QModelIndex()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_a2deef5b14f8f66431a55fdb0484025b6}
+\hypertarget{class_playlist_model_a61fcc4b9d0eaad86492c283b05c30fbc}{\index{Playlist\-Model@{Playlist\-Model}!set\-Data@{set\-Data}}
+\index{set\-Data@{set\-Data}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{set\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool Playlist\-Model\-::set\-Data (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{index, }
+\item[{const Q\-Variant \&}]{value, }
+\item[{int}]{role = {\ttfamily Qt\-:\-:DisplayRole}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_a61fcc4b9d0eaad86492c283b05c30fbc}
+\hypertarget{class_playlist_model_aaf551c97c7a8ded2a3d3333f15f558a5}{\index{Playlist\-Model@{Playlist\-Model}!set\-Playlist@{set\-Playlist}}
+\index{set\-Playlist@{set\-Playlist}!PlaylistModel@{Playlist\-Model}}
+\subsubsection[{set\-Playlist}]{\setlength{\rightskip}{0pt plus 5cm}void Playlist\-Model\-::set\-Playlist (
+\begin{DoxyParamCaption}
+\item[{Q\-Media\-Playlist $\ast$}]{playlist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_playlist_model_aaf551c97c7a8ded2a3d3333f15f558a5}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-playlistmodel.\-h\item 
-playlistmodel.\-cpp\end{DoxyCompactItemize}
+\hyperlink{playlistmodel_8h}{playlistmodel.\-h}\item 
+\hyperlink{playlistmodel_8cpp}{playlistmodel.\-cpp}\end{DoxyCompactItemize}

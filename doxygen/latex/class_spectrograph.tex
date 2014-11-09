@@ -1,35 +1,94 @@
-\hypertarget{class_spectrograph}{\section{Referência à classe Spectrograph}
+\hypertarget{class_spectrograph}{\section{Spectrograph Class Reference}
 \label{class_spectrograph}\index{Spectrograph@{Spectrograph}}
 }
-Diagrama de heranças da classe Spectrograph\begin{figure}[H]
+
+
+{\ttfamily \#include $<$spectrograph.\-h$>$}
+
+Inheritance diagram for Spectrograph\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_spectrograph}
 \end{center}
 \end{figure}
-\subsection*{Slots públicos}
+\subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_spectrograph_a22138fa296829fb5449202f262e64bf5}{paint\-Event} (Q\-Paint\-Event $\ast$e)
-\item 
+\begin{DoxyCompactList}\small\item\em paint\-Event Paints the screen for spectrum displaing \end{DoxyCompactList}\item 
 void \hyperlink{class_spectrograph_ae94e6b07459f40c57ed7db97f5d32cf1}{load\-Samples} (Q\-Vector$<$ double $>$ \&\-\_\-spectrum)
 \item 
 void \hyperlink{class_spectrograph_af690851ad862181732979bdfa88b2dbe}{timer\-Event} (Q\-Timer\-Event $\ast$e)
-\item 
+\begin{DoxyCompactList}\small\item\em timer\-Event Used to modify spectrum while a new sample does not arrive \end{DoxyCompactList}\item 
 void \hyperlink{class_spectrograph_a06514c3f632bc47c7da2cfd66330e85e}{resize\-Event} (Q\-Resize\-Event $\ast$e)
-\item 
+\begin{DoxyCompactList}\small\item\em resize\-Event what to do when widget size changes it is used to recalculate the width of the bars and some gradient colors \end{DoxyCompactList}\item 
+void \hyperlink{class_spectrograph_a934531dccea6339a990fff27cdff4dad}{context\-Menu\-Event} (Q\-Context\-Menu\-Event $\ast$e)
+\begin{DoxyCompactList}\small\item\em context\-Menu\-Event Open context menu when user clicks on the component using mouse right button \end{DoxyCompactList}\item 
 void \hyperlink{class_spectrograph_aeb2d9200c513b1de462de5f16c4cb0ca}{load\-Levels} (double left, double right)
-\end{DoxyCompactItemize}
-\subsection*{Membros públicos}
+\begin{DoxyCompactList}\small\item\em load\-Levels Loads mean left and right audio channel values \end{DoxyCompactList}\item 
+void \hyperlink{class_spectrograph_aa583f92a0df8fcdd7887c9b45c488658}{do\-Action} ()
+\begin{DoxyCompactList}\small\item\em do\-Action Do some example action when user activates context menu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_spectrograph_ae4a10124a7de6cec48ccd09db0ab5fb6}{{\bfseries Spectrograph} (Q\-Widget $\ast$parent=0)}\label{class_spectrograph_ae4a10124a7de6cec48ccd09db0ab5fb6}
+\hyperlink{class_spectrograph_ae4a10124a7de6cec48ccd09db0ab5fb6}{Spectrograph} (Q\-Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_spectrograph}{Spectrograph} Class constructor. Setup initial behavior for the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_spectrograph_ae4a10124a7de6cec48ccd09db0ab5fb6}{\index{Spectrograph@{Spectrograph}!Spectrograph@{Spectrograph}}
+\index{Spectrograph@{Spectrograph}!Spectrograph@{Spectrograph}}
+\subsubsection[{Spectrograph}]{\setlength{\rightskip}{0pt plus 5cm}Spectrograph\-::\-Spectrograph (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_spectrograph_ae4a10124a7de6cec48ccd09db0ab5fb6}
 
 
-\subsection{Documentação dos métodos}
-\hypertarget{class_spectrograph_aeb2d9200c513b1de462de5f16c4cb0ca}{\index{Spectrograph@{Spectrograph}!load\-Levels@{load\-Levels}}
+\hyperlink{class_spectrograph}{Spectrograph} Class constructor. Setup initial behavior for the widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & pointer to widget parent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_spectrograph_a934531dccea6339a990fff27cdff4dad}{\index{Spectrograph@{Spectrograph}!context\-Menu\-Event@{context\-Menu\-Event}}
+\index{context\-Menu\-Event@{context\-Menu\-Event}!Spectrograph@{Spectrograph}}
+\subsubsection[{context\-Menu\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Spectrograph\-::context\-Menu\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Context\-Menu\-Event $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_spectrograph_a934531dccea6339a990fff27cdff4dad}
+
+
+context\-Menu\-Event Open context menu when user clicks on the component using mouse right button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_spectrograph_aa583f92a0df8fcdd7887c9b45c488658}{\index{Spectrograph@{Spectrograph}!do\-Action@{do\-Action}}
+\index{do\-Action@{do\-Action}!Spectrograph@{Spectrograph}}
+\subsubsection[{do\-Action}]{\setlength{\rightskip}{0pt plus 5cm}void Spectrograph\-::do\-Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_spectrograph_aa583f92a0df8fcdd7887c9b45c488658}
+
+
+do\-Action Do some example action when user activates context menu 
+
+\hyperlink{class_spectrograph_aa583f92a0df8fcdd7887c9b45c488658}{Spectrograph\-::do\-Action}.
+
+this function is called when \char`\"{}acao\char`\"{} action is called on the popup context menu Creates the message box
+
+defines a text for the box
+
+display the message box \hypertarget{class_spectrograph_aeb2d9200c513b1de462de5f16c4cb0ca}{\index{Spectrograph@{Spectrograph}!load\-Levels@{load\-Levels}}
 \index{load\-Levels@{load\-Levels}!Spectrograph@{Spectrograph}}
 \subsubsection[{load\-Levels}]{\setlength{\rightskip}{0pt plus 5cm}void Spectrograph\-::load\-Levels (
 \begin{DoxyParamCaption}
@@ -37,7 +96,24 @@ void \hyperlink{class_spectrograph_aeb2d9200c513b1de462de5f16c4cb0ca}{load\-Leve
 \item[{double}]{right}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_spectrograph_aeb2d9200c513b1de462de5f16c4cb0ca}
-brief Loads left and right mean audio values \hypertarget{class_spectrograph_ae94e6b07459f40c57ed7db97f5d32cf1}{\index{Spectrograph@{Spectrograph}!load\-Samples@{load\-Samples}}
+
+
+load\-Levels Loads mean left and right audio channel values 
+
+\hyperlink{class_spectrograph_aeb2d9200c513b1de462de5f16c4cb0ca}{Spectrograph\-::load\-Levels}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & left mean audio value \\
+\hline
+{\em right} & right mean audio value\\
+\hline
+{\em left} & \\
+\hline
+{\em right} & loads left and right mean audio levels do some scaling for better display purposes \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_spectrograph_ae94e6b07459f40c57ed7db97f5d32cf1}{\index{Spectrograph@{Spectrograph}!load\-Samples@{load\-Samples}}
 \index{load\-Samples@{load\-Samples}!Spectrograph@{Spectrograph}}
 \subsubsection[{load\-Samples}]{\setlength{\rightskip}{0pt plus 5cm}void Spectrograph\-::load\-Samples (
 \begin{DoxyParamCaption}
@@ -51,23 +127,56 @@ brief Load samples to be displayed \hypertarget{class_spectrograph_a22138fa29682
 \item[{Q\-Paint\-Event $\ast$}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_spectrograph_a22138fa296829fb5449202f262e64bf5}
-brief Paints the screen for spectrum displaing \hypertarget{class_spectrograph_a06514c3f632bc47c7da2cfd66330e85e}{\index{Spectrograph@{Spectrograph}!resize\-Event@{resize\-Event}}
+
+
+paint\-Event Paints the screen for spectrum displaing 
+
+\hyperlink{class_spectrograph_a22138fa296829fb5449202f262e64bf5}{Spectrograph\-::paint\-Event}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & stores information about the painting event\\
+\hline
+{\em e} & This is the function that draws the widget \\
+\hline
+\end{DoxyParams}
+some events are not necessary.
+
+we marked the as U\-N\-U\-S\-E\-D to avoid compiler warnings \hypertarget{class_spectrograph_a06514c3f632bc47c7da2cfd66330e85e}{\index{Spectrograph@{Spectrograph}!resize\-Event@{resize\-Event}}
 \index{resize\-Event@{resize\-Event}!Spectrograph@{Spectrograph}}
 \subsubsection[{resize\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Spectrograph\-::resize\-Event (
 \begin{DoxyParamCaption}
 \item[{Q\-Resize\-Event $\ast$}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_spectrograph_a06514c3f632bc47c7da2cfd66330e85e}
-brief Redefines some variables when the widget is resized \hypertarget{class_spectrograph_af690851ad862181732979bdfa88b2dbe}{\index{Spectrograph@{Spectrograph}!timer\-Event@{timer\-Event}}
+
+
+resize\-Event what to do when widget size changes it is used to recalculate the width of the bars and some gradient colors 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & stores information about resize event \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_spectrograph_af690851ad862181732979bdfa88b2dbe}{\index{Spectrograph@{Spectrograph}!timer\-Event@{timer\-Event}}
 \index{timer\-Event@{timer\-Event}!Spectrograph@{Spectrograph}}
 \subsubsection[{timer\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Spectrograph\-::timer\-Event (
 \begin{DoxyParamCaption}
 \item[{Q\-Timer\-Event $\ast$}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_spectrograph_af690851ad862181732979bdfa88b2dbe}
-brief Used to modify spectrum while a new sample does not arrive 
 
-A documentação para esta classe foi gerada a partir dos seguintes ficheiros\-:\begin{DoxyCompactItemize}
+
+timer\-Event Used to modify spectrum while a new sample does not arrive 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-spectrograph.\-h\item 
-spectrograph.\-cpp\end{DoxyCompactItemize}
+\hyperlink{spectrograph_8h}{spectrograph.\-h}\item 
+\hyperlink{spectrograph_8cpp}{spectrograph.\-cpp}\end{DoxyCompactItemize}

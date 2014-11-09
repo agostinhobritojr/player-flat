@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['paintevent',['paintEvent',['../class_spectrograph.html#a22138fa296829fb5449202f262e64bf5',1,'Spectrograph']]]
+  ['bufferprocessor',['BufferProcessor',['../class_buffer_processor.html#a910d84b159f28bcaf05b47ce7e81eb0c',1,'BufferProcessor']]]
 ];

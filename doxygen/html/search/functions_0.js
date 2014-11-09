@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['loadlevels',['loadLevels',['../class_spectrograph.html#aeb2d9200c513b1de462de5f16c4cb0ca',1,'Spectrograph']]],
-  ['loadsamples',['loadSamples',['../class_spectrograph.html#ae94e6b07459f40c57ed7db97f5d32cf1',1,'Spectrograph']]]
+  ['abstractcontrol',['AbstractControl',['../class_abstract_control.html#a2caef38ad55c0589a073a3ead352c7ad',1,'AbstractControl']]],
+  ['abstractmediainfo',['AbstractMediaInfo',['../class_abstract_media_info.html#a9e2f1e341c8be06217de939859c93045',1,'AbstractMediaInfo']]],
+  ['abstractspectrograph',['AbstractSpectrograph',['../class_abstract_spectrograph.html#a65397c857ad0db5e7d83f831080d6756',1,'AbstractSpectrograph']]],
+  ['addfoldertolibrary',['addFolderToLibrary',['../class_main_window.html#a659d33ceffcceae28005205fe44edda4',1,'MainWindow']]],
+  ['alldone',['allDone',['../class_buffer_processor.html#a9dd9e6636e0dc2a4a263f045a3338013',1,'BufferProcessor']]]
 ];
