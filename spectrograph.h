@@ -14,12 +14,6 @@
 #include <QGradient>
 #include <QAction>
 
-// the maximum number of bands
-#define BAND_MAX 128
-
-// width of the bar to be displayed
-#define MIN_BARWIDTH 30
-
 // spectrograph class is used to display fourier spectrum
 // bars
 class Spectrograph : public AbstractSpectrograph{
@@ -67,15 +61,11 @@ private:
   QVector<int> spectrum, delay;
 
   int leftLevel, rightLevel;
-  int decayIncr;
   int NUM_BANDS;
   QLinearGradient gradient;
-  QBrush gradientBrush, backgroundBrush,
-  transparentBrush, decayBrush;
+  QBrush gradientBrush, backgroundBrush,transparentBrush;
   QPen pen;
   float barSpacing, barWidth, widgetHeight;
-  double max;
-  double time;
   QAction *acao;
 };
 

@@ -14,7 +14,7 @@
 Spectrograph::Spectrograph(QWidget *parent) :
   AbstractSpectrograph(parent){
   startTimer(15);
-  NUM_BANDS = 32;
+  NUM_BANDS = 256;
   spectrum.resize(NUM_BANDS);
   delay.resize(NUM_BANDS);
   for(int i=0; i<NUM_BANDS; i++){
@@ -22,18 +22,12 @@ Spectrograph::Spectrograph(QWidget *parent) :
       delay[i]=1;
   }
   leftLevel = rightLevel = 1;
-  gradient = QLinearGradient(rect().topLeft(), rect().bottomLeft());
   gradient.setColorAt(1, Qt::black);
   gradient.setColorAt(0, Qt::black);
-  gradientBrush = QBrush(gradient);
   gradientBrush.setStyle(Qt::SolidPattern);
   backgroundBrush.setColor(Qt::white);
   backgroundBrush.setStyle(Qt::SolidPattern);
-  transparentBrush.setColor(Qt::transparent);
-  pen.setColor(qRgb(0,0,0));
-  decayBrush.setColor(QColor(255,0,0,255));
-  decayBrush.setStyle(Qt::SolidPattern);
-  barWidth = MIN_BARWIDTH;
+
   barSpacing = 1;
   acao = new QAction("Acao",this);
   connect(acao,SIGNAL(triggered()),this,SLOT(doAction()));
@@ -43,20 +37,7 @@ void Spectrograph::resizeEvent(QResizeEvent *e){
   e->accept();
   gradient = QLinearGradient(rect().topLeft(), rect().bottomLeft());
   gradientBrush = QBrush(gradient);
-  NUM_BANDS = width()/barWidth;
-  if(NUM_BANDS > BAND_MAX){
-    NUM_BANDS = BAND_MAX;
-    barWidth = (float)width()/NUM_BANDS;
-  }
-  else{
-    barWidth = MIN_BARWIDTH;
-  }
-  spectrum.resize(NUM_BANDS);
-  delay.resize(NUM_BANDS);
-  for(int i=0; i<NUM_BANDS; i++){
-      spectrum[i]=1;
-      delay[i]=1;
-  }
+  barWidth = (float)width()/NUM_BANDS;
   widgetHeight = height();
   repaint();
 }

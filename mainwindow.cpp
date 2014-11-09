@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QResource>
 
 // constructor: warm up all stuff
 MainWindow::MainWindow(QWidget *parent) :
@@ -137,8 +138,20 @@ MainWindow::MainWindow(QWidget *parent) :
 
   // tells the probe what to probe
   probe->setSource(player);
+  QDirIterator it(":", QDirIterator::Subdirectories);
+  while (it.hasNext()) {
+      qDebug() << it.next();
+  }
+  // copy mp3 file from resource to the playlist for development convenience
+  // you can comment out the following lines if desired
+  QString defaultAudioFile;
 
-  playlist->addMedia(QUrl:: (":/audiosample.mp3"));
+  defaultAudioFile = QDir::currentPath()+"/audiosample.mp3";
+  // convert the audio resource to a file in application execution path
+  QFile::copy(":/resources/audiosample.mp3" , defaultAudioFile);
+
+  // adds the audio file to playlist
+  playlist->addMedia(QUrl::fromLocalFile(defaultAudioFile));
 
 }
 
