@@ -16,12 +16,18 @@
 
 // spectrograph class is used to display fourier spectrum
 // bars
+/**
+ * @brief The Spectrograph class is used to draw the fourier spectrum on the screen.
+ * @details It periodically receives an array containing the spectrum with values
+ * scaled within the range [0,1], and the left and right mean audio values
+ */
 class Spectrograph : public AbstractSpectrograph{
   Q_OBJECT
 public:
   /**
    * @brief Spectrograph Class constructor. Setup initial behavior for the widget
-   * @param parent pointer to widget parent
+   * @param The pointer to parent widget (it is supposed to be the place where this
+   * widget has to be drawn)
    *
    */
   explicit Spectrograph(QWidget *parent = 0);
@@ -30,79 +36,97 @@ signals:
 
 public slots:
   /**
-   * @brief paintEvent Paints the screen for spectrum displaing
+   * @brief Paints the screen for spectrum displaing
    * @param e stores information about the painting event
    */
   void paintEvent(QPaintEvent *e);
-  /*!brief Load samples to be displayed
-  */
-  void loadSamples(QVector<double> &_spectrum);
+
   /**
-   * @brief timerEvent
-   * Used to modify spectrum while a new sample
-   * does not arrive
+   * @brief This method decides what to do when a new spectrum sample
+   * has arrived.
+   * @detailed This method is called periodically by mainwindow every time a
+   * new spectrum is calculated. the _spectrum array reference stores double values
+   * within the range [0,1] and it has 256 elements.
+   * @param _spectrum stores the spectrum.
+   */
+  void loadSamples(QVector<double> &_spectrum);
+
+  /**
+   * @brief Used to modify spectrum while a new sample does not arrive
    * @param e
    */
   void timerEvent(QTimerEvent *e);
 
   /**
-   * @brief resizeEvent what to do when widget size changes
-   * it is used to recalculate the width of the bars and some gradient colors
+   * @brief What to do when widget size changes
+   * @details It is used to recalculate the width of the bars and
+   * some gradient colors
    * @param e stores information about resize event
    */
   void resizeEvent(QResizeEvent *e);
 
   /**
-   * @brief contextMenuEvent Open context menu when user clicks on the component using mouse right button
-   * @param e
+   * @brief Open context menu
+   * @details This is what is called when user clicks on the
+   * component using mouse right button
+   * @param e This event is used to return the position of mouse click
+   * when the context menu is activated
    */
   void contextMenuEvent(QContextMenuEvent *e);
 
   /**
-   * @brief loadLevels Loads mean left and right audio channel values
+   * @brief Loads mean left and right audio channel values
+   * @details This method is invoked by mainwindow component
+   * every time a new audio sample is processed, supplying left
+   * and right mean audio values
+   *
+   * It also performs some scaling for better display purposes
+
    * @param left left mean audio value
    * @param right right mean audio value
    */
   void loadLevels(double left, double right);
 
   /**
-   * @brief doAction Do some example action when user activates context menu
+   * @brief Do some example action when user activates context menu
+   * @details You can add new of such functions to allow new context
+   * menu entries
    */
   void doAction();
 private:
   /**
-   * @brief spectrum stores fft spectrum
+   * @brief Stores the fft spectrum.
+   * @details spectrum is an array that should have a MAXIMUM of 256 entries.
+   * You should not trespass this limit
    */
   QVector<int> spectrum;
   /**
-   * @brief delay stores the delay for decay bars to simulate gravity
+   * @brief Stores the delay for decay bars to simulate gravity
    */
   QVector<int> delay;
 
   /**
-   * @brief leftLevel left level bar size
-   * @brief rightLevel right level bar size
+   * @brief Left and right level bar size
    */
   int leftLevel, rightLevel;
   /**
-   * @brief NUM_BANDS number of spectrum bands (MAX=512!!!)
+   * @brief Number of spectrum bands (MAX=256!!!)
    */
   int NUM_BANDS;
   /**
-   * @brief gradient defines the gradient for drawing the spectrum bars
+   * @brief Holds the gradient for drawing the spectrum bars
    */
   QLinearGradient gradient;
   /**
-   * @brief gradientBrush brush for drawing the gradient patterns
-   * @brief backgroundBrush brush for drawing the background pattern
+   * @brief Brushes for drawing the gradient and background patterns
    */
   QBrush gradientBrush, backgroundBrush;
   /**
-   * @brief pen default pen for drawing lines
+   * @brief A pen for drawing lines
    */
   QPen pen;
   /**
-   * @brief barSpacing spacing between spectrum bars. Usually, just one pixel
+   * @brief Spacing between spectrum bars. Usually, just one pixel
    */
   float barSpacing, barWidth, widgetHeight;
   QAction *acao;

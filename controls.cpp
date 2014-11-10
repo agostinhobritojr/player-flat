@@ -8,8 +8,6 @@
 Controls::Controls(QWidget *parent):
   AbstractControl(parent), ui(new Ui::Controls){
   ui->setupUi(this);
-  // user did not selected music position yet
-  sliderPressed = false;
 
   // when the user releases the slider, tells qt a
   // new position was chosen
@@ -18,6 +16,9 @@ Controls::Controls(QWidget *parent):
 
   // duration records total music time to be played
   duration=1;
+
+  // the horizontal slider is initially disabled, since no music has
+  // been loaded
   ui->horizontalSliderPosition->setDisabled(true);
 }
 

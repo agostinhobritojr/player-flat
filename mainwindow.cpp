@@ -152,6 +152,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
   // adds the audio file to playlist
   playlist->addMedia(QUrl::fromLocalFile(defaultAudioFile));
+  player->play();
 
 }
 

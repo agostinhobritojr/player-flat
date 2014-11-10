@@ -18,7 +18,6 @@ public:
 private:
     Ui::Controls *ui;
     qint64 duration;
-    int sliderPressed;
 public slots:
     void onPlayPauseClicked(void);
     void onPrevClicked(void);
