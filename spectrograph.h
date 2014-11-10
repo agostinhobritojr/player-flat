@@ -25,7 +25,7 @@ class Spectrograph : public AbstractSpectrograph{
   Q_OBJECT
 public:
   /**
-   * @brief Spectrograph Class constructor. Setup initial behavior for the widget
+   * @brief Class constructor. Setup initial behavior for the widget
    * @param The pointer to parent widget (it is supposed to be the place where this
    * widget has to be drawn)
    *
