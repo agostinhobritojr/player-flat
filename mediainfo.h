@@ -37,12 +37,12 @@ public slots:
   /**
    * @brief setAtribute receives a pair property/value from mainwindow widget
    * @param property receives a string that may hold the following values:
-   * -"AlbumArtist" : the album artist
-   * -"Title": music title
-   * -"AlbumTitle": album title
-   * -"TrackNumber": track number
-   * -"AudioBitRate": song bitrate
-   * -"AudioCodec": song codec
+   * - "AlbumArtist" : the album artist
+   * - "Title": music title
+   * - "AlbumTitle": album title
+   * - "TrackNumber": track number
+   * - "AudioBitRate": song bitrate
+   * - "AudioCodec": song codec
 
    * @param value receives the information associated to its corresponding property
    * ex: "AlbumArtist" <==> "Elton Jonh"
