@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timerevent',['timerEvent',['../class_spectrograph.html#af690851ad862181732979bdfa88b2dbe',1,'Spectrograph']]]
+  ['resizeevent',['resizeEvent',['../class_spectrograph.html#a06514c3f632bc47c7da2cfd66330e85e',1,'Spectrograph']]]
 ];

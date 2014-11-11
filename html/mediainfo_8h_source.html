@@ -96,28 +96,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="class_media_info.html">MediaInfo</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_media_info.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_media_info.html">MediaInfo</a> : <span class="keyword">public</span> <a class="code" href="class_abstract_media_info.html">AbstractMediaInfo</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  Q_OBJECT</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="class_media_info.html">MediaInfo</a>(QWidget *parent = 0);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  ~<a class="code" href="class_media_info.html">MediaInfo</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">void</span> setAtribute(QString property, QString value);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  Ui::MediaInfo *ui;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  QString artist, title, album, bitrate, codec, track;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif // MEDIAINFO_H</span></div>
-<div class="ttc" id="class_media_info_html"><div class="ttname"><a href="class_media_info.html">MediaInfo</a></div><div class="ttdef"><b>Definition:</b> mediainfo.h:14</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_media_info.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_media_info.html">MediaInfo</a> : <span class="keyword">public</span> <a class="code" href="class_abstract_media_info.html">AbstractMediaInfo</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  Q_OBJECT</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="class_media_info.html#a80b7af5a999c7ab31e4207c39ccb8833">MediaInfo</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="class_media_info.html#a28c974ae197fcb8bd2e083c7cb4cb99c">~MediaInfo</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_media_info.html#ac1a807582e0830e8f7a6167257a8b69a">setAtribute</a>(QString property, QString value);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  Ui::MediaInfo *ui;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  QString artist, title, album, bitrate, codec, track;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif // MEDIAINFO_H</span></div>
+<div class="ttc" id="class_media_info_html"><div class="ttname"><a href="class_media_info.html">MediaInfo</a></div><div class="ttdoc">The MediaInfo class is supposed to be able to display information about the current media that is bee...</div><div class="ttdef"><b>Definition:</b> mediainfo.h:20</div></div>
+<div class="ttc" id="class_media_info_html_ac1a807582e0830e8f7a6167257a8b69a"><div class="ttname"><a href="class_media_info.html#ac1a807582e0830e8f7a6167257a8b69a">MediaInfo::setAtribute</a></div><div class="ttdeci">void setAtribute(QString property, QString value)</div><div class="ttdoc">setAtribute receives a pair property/value from mainwindow widget </div><div class="ttdef"><b>Definition:</b> mediainfo.cpp:17</div></div>
 <div class="ttc" id="class_abstract_media_info_html"><div class="ttname"><a href="class_abstract_media_info.html">AbstractMediaInfo</a></div><div class="ttdef"><b>Definition:</b> abstractmediainfo.h:7</div></div>
+<div class="ttc" id="class_media_info_html_a80b7af5a999c7ab31e4207c39ccb8833"><div class="ttname"><a href="class_media_info.html#a80b7af5a999c7ab31e4207c39ccb8833">MediaInfo::MediaInfo</a></div><div class="ttdeci">MediaInfo(QWidget *parent=0)</div><div class="ttdoc">Class constructor to perform initial setups. </div><div class="ttdef"><b>Definition:</b> mediainfo.cpp:5</div></div>
+<div class="ttc" id="class_media_info_html_a28c974ae197fcb8bd2e083c7cb4cb99c"><div class="ttname"><a href="class_media_info.html#a28c974ae197fcb8bd2e083c7cb4cb99c">MediaInfo::~MediaInfo</a></div><div class="ttdeci">~MediaInfo()</div><div class="ttdoc">Class destructor. </div><div class="ttdef"><b>Definition:</b> mediainfo.cpp:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 10 2014 12:14:10 for Player-flat by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 11 2014 08:38:38 for Player-flat by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

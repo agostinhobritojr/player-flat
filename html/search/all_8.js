@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['resizeevent',['resizeEvent',['../class_spectrograph.html#a06514c3f632bc47c7da2cfd66330e85e',1,'Spectrograph']]]
+  ['paintevent',['paintEvent',['../class_spectrograph.html#a22138fa296829fb5449202f262e64bf5',1,'Spectrograph']]],
+  ['playlistmodel',['PlaylistModel',['../class_playlist_model.html',1,'']]]
 ];

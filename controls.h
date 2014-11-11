@@ -29,7 +29,7 @@ public:
     
 private:
   /**
-    * @brief ui acess the form that draws the controls user interface
+    * @brief ui access the form that draws the controls user interface
     */
     Ui::Controls *ui;
 

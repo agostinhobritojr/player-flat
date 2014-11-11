@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spectrograph',['Spectrograph',['../class_spectrograph.html',1,'Spectrograph'],['../class_spectrograph.html#ae4a10124a7de6cec48ccd09db0ab5fb6',1,'Spectrograph::Spectrograph()']]]
+  ['resizeevent',['resizeEvent',['../class_spectrograph.html#a06514c3f632bc47c7da2cfd66330e85e',1,'Spectrograph']]]
 ];

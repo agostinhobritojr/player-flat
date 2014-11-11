@@ -90,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MediaInfo Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_media_info.html" title="The MediaInfo class is supposed to be able to display information about the current media that is bee...">MediaInfo</a> class is supposed to be able to display information about the current media that is been played.  
+ <a href="class_media_info.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mediainfo_8h_source.html">mediainfo.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MediaInfo:</div>
 <div class="dyncontent">
@@ -102,8 +107,8 @@ Inheritance diagram for MediaInfo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:ac1a807582e0830e8f7a6167257a8b69a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1a807582e0830e8f7a6167257a8b69a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAtribute</b> (QString property, QString value)</td></tr>
+<tr class="memitem:ac1a807582e0830e8f7a6167257a8b69a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info.html#ac1a807582e0830e8f7a6167257a8b69a">setAtribute</a> (QString property, QString value)</td></tr>
+<tr class="memdesc:ac1a807582e0830e8f7a6167257a8b69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">setAtribute receives a pair property/value from mainwindow widget  <a href="#ac1a807582e0830e8f7a6167257a8b69a">More...</a><br/></td></tr>
 <tr class="separator:ac1a807582e0830e8f7a6167257a8b69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_slots_class_abstract_media_info"><td colspan="2" onclick="javascript:toggleInherit('pub_slots_class_abstract_media_info')"><img src="closed.png" alt="-"/>&#160;Public Slots inherited from <a class="el" href="class_abstract_media_info.html">AbstractMediaInfo</a></td></tr>
 <tr class="memitem:a59e096003b04baa551608fba8bed00d1 inherit pub_slots_class_abstract_media_info"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e096003b04baa551608fba8bed00d1"></a>
@@ -112,14 +117,98 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAtribute</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a80b7af5a999c7ab31e4207c39ccb8833"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80b7af5a999c7ab31e4207c39ccb8833"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MediaInfo</b> (QWidget *parent=0)</td></tr>
+<tr class="memitem:a80b7af5a999c7ab31e4207c39ccb8833"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info.html#a80b7af5a999c7ab31e4207c39ccb8833">MediaInfo</a> (QWidget *parent=0)</td></tr>
+<tr class="memdesc:a80b7af5a999c7ab31e4207c39ccb8833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor to perform initial setups.  <a href="#a80b7af5a999c7ab31e4207c39ccb8833">More...</a><br/></td></tr>
 <tr class="separator:a80b7af5a999c7ab31e4207c39ccb8833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c974ae197fcb8bd2e083c7cb4cb99c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28c974ae197fcb8bd2e083c7cb4cb99c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_media_info.html#a28c974ae197fcb8bd2e083c7cb4cb99c">~MediaInfo</a> ()</td></tr>
+<tr class="memdesc:a28c974ae197fcb8bd2e083c7cb4cb99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor. <br/></td></tr>
+<tr class="separator:a28c974ae197fcb8bd2e083c7cb4cb99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_abstract_media_info"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_media_info')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_abstract_media_info.html">AbstractMediaInfo</a></td></tr>
 <tr class="memitem:a9e2f1e341c8be06217de939859c93045 inherit pub_methods_class_abstract_media_info"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e2f1e341c8be06217de939859c93045"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractMediaInfo</b> (QWidget *parent=0)</td></tr>
 <tr class="separator:a9e2f1e341c8be06217de939859c93045 inherit pub_methods_class_abstract_media_info"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_media_info.html" title="The MediaInfo class is supposed to be able to display information about the current media that is bee...">MediaInfo</a> class is supposed to be able to display information about the current media that is been played. </p>
+<p>It receives several properties that are extracted from the current media available on media player </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a80b7af5a999c7ab31e4207c39ccb8833"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MediaInfo::MediaInfo </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class constructor to perform initial setups. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>is the pointer to parent widget (it is supposed to be the place where this widget has to be drawn) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac1a807582e0830e8f7a6167257a8b69a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MediaInfo::setAtribute </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>setAtribute receives a pair property/value from mainwindow widget </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">property</td><td>receives a string that may hold the following values: -"AlbumArtist" : the album artist -"Title": music title -"AlbumTitle": album title -"TrackNumber": track number -"AudioBitRate": song bitrate -"AudioCodec": song codec</td></tr>
+    <tr><td class="paramname">value</td><td>receives the information associated to its corresponding property ex: "AlbumArtist" &lt;==&gt; "Elton Jonh" </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="mediainfo_8h_source.html">mediainfo.h</a></li>
 <li>mediainfo.cpp</li>
@@ -127,7 +216,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 10 2014 12:14:10 for Player-flat by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 11 2014 08:38:38 for Player-flat by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
