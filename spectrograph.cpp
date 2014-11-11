@@ -13,19 +13,29 @@
 
 Spectrograph::Spectrograph(QWidget *parent) :
   AbstractSpectrograph(parent){
+  // start a timer to update the widget each 15ms
   startTimer(15);
+
+  // we have set up the maximum number of bands
   NUM_BANDS = 256;
+
+  // resize spectrum to this size
   spectrum.resize(NUM_BANDS);
+
+  // as well as delay array
   delay.resize(NUM_BANDS);
+
+  // start up all arrays with 1
   for(int i=0; i<NUM_BANDS; i++){
       spectrum[i]=1;
       delay[i]=1;
   }
+
+  // initial values for left and right levels
   leftLevel = rightLevel = 1;
-  gradient.setColorAt(1, Qt::black);
-  gradient.setColorAt(0, Qt::black);
+
   gradientBrush.setStyle(Qt::SolidPattern);
-  backgroundBrush.setColor(Qt::white);
+  backgroundBrush.setColor(Qt::black);
   backgroundBrush.setStyle(Qt::SolidPattern);
 
   barSpacing = 1;
@@ -36,6 +46,9 @@ Spectrograph::Spectrograph(QWidget *parent) :
 void Spectrograph::resizeEvent(QResizeEvent *e){
   e->accept();
   gradient = QLinearGradient(rect().topLeft(), rect().bottomLeft());
+  // setup bar gradient colors
+  gradient.setColorAt(1, Qt::blue);
+  gradient.setColorAt(0, Qt::red);
   gradientBrush = QBrush(gradient);
   barWidth = (float)width()/NUM_BANDS;
   widgetHeight = height();

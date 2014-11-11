@@ -17,7 +17,7 @@ class Controls : public AbstractControl{
 public:
   /**
      * @brief Class constructor
-     * @param The pointer to parent widget (it is supposed to be the place
+     * @param parent is the pointer to parent widget (it is supposed to be the place
      * where this widget has to be drawn)
      */
     explicit Controls(QWidget *parent = 0);
