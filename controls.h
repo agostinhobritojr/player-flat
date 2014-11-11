@@ -71,13 +71,32 @@ public slots:
      */
     void onDurationChanged(qint64 value);
 protected slots:
+    /**
+     * @brief onSliderReleased is called when the user releases the duration slider
+     * @details When this slider is released, the widget tells mainwindow that user
+     * selected a new part of the song to play.
+     */
     void onSliderReleased();
 signals:
+    /**
+     * @brief playPause is emitted when the user presses the play/pause button
+     */
     void playPause();
+    /**
+     * @brief next signal is emitted when the user presses next button
+     */
     void next();
+    /**
+     * @brief prev signal is emitted when the user presses prev button
+     */
     void prev();
-    void stop();
+    /**
+     * @brief volumeSelected signal is emitted when the user selects a new volume
+     */
     void volumeSelected(int);
+    /**
+     * @brief elapsedSelected tells qt which part of the song the user selected to play
+     */
     void elapsedSelected(qint64);
 };
 
