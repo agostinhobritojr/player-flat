@@ -25,7 +25,6 @@
 #include <QUrl>
 #include <QVector>
 
-
 #include "fftcalc.h"
 #include "playlistmodel.h"
 
@@ -36,6 +35,10 @@ class MainWindow;
 // the MainWindow class is used to manage with all stuff
 // fft, audio probing, widget properties
 
+/**
+ * @brief The MainWindow class is the conductor of all parts of this simple player.
+ * @details This class is
+ */
 class MainWindow : public QMainWindow{
     Q_OBJECT
     
